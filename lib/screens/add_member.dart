@@ -232,6 +232,9 @@ class _AddMemberState extends State<AddMember> {
                     style: TextStyle(color: Colors.white),
                   )),
             )),
+            const SizedBox(
+              height: 20,
+            ),
           ],
         ));
   }

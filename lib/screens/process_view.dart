@@ -1,6 +1,8 @@
 import 'package:carrom/models/MyDataModel.dart';
 import 'package:flutter/material.dart';
 
+import '../home_page.dart';
+
 class ProcessView extends StatelessWidget {
   ProcessView({super.key, required this.userData});
 
@@ -14,7 +16,7 @@ class ProcessView extends StatelessWidget {
         children: [
           const Center(
               child: Text("Member Added Successfully",
-                  style: TextStyle(fontSize: 24, color: Colors.greenAccent))),
+                  style: TextStyle(fontSize: 24, color: Colors.green))),
           const SizedBox(
             height: 20,
           ),
@@ -69,6 +71,25 @@ class ProcessView extends StatelessWidget {
           ListTile(
             title: const Text("Final Amount"),
             subtitle: Text(memberData['finalamount'].toString()),
+          ),
+          Center(
+              child: InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomePage()));
+            },
+            child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.purple,
+                    borderRadius: BorderRadius.circular(8)),
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  "Add Memeber",
+                  style: TextStyle(color: Colors.white),
+                )),
+          )),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),
