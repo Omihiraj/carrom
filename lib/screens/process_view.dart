@@ -84,7 +84,7 @@ class ProcessView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8)),
                 padding: const EdgeInsets.all(20),
                 child: const Text(
-                  "Add Memeber",
+                  "Go to Home",
                   style: TextStyle(color: Colors.white),
                 )),
           )),
